@@ -1,6 +1,6 @@
 # kilalaCMS
 
-[![trivy](https://github.com/tsluyter/kilalaCMS/actions/workflows/trivy.yml/badge.svg?branch=main)](https://github.com/tsluyter/kilalaCMS/actions/workflows/trivy.yml)
+[![trivy](https://github.com/tsluyter/kilalaCMS/actions/workflows/trivy.yml/badge.svg?branch=main)](https://github.com/tsluyter/kilalaCMS/actions/workflows/trivy.yml) [![Semgrep](https://github.com/tsluyter/kilalaCMS/actions/workflows/semgrep.yml/badge.svg?branch=main)](https://github.com/tsluyter/kilalaCMS/actions/workflows/semgrep.yml)
 
 The new CMS behind my personal blog. Open source this time!
 
