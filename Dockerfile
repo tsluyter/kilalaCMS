@@ -11,9 +11,10 @@ RUN apk add composer \
             php-mbstring \
             php-tokenizer \
             php-dom \
-    && composer install --no-dev
+    && composer install --no-dev \
+    && rm -r /var/www/tests/
 
-RUN chown -R www-data:www-data /var/www/ && rm -r /var/www/tests
+RUN chown -R www-data:www-data /var/www/ 
 
 EXPOSE 8080
 USER www-data
