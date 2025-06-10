@@ -7,4 +7,3 @@ repos:
         description: Detect hardcoded secrets
         pass_filenames: false
         entry: bash -c 'docker run --rm -v "${PWD}:/src" docker.io/zricethezav/gitleaks:latest protect --verbose --redact --staged --source="/src"'
-
