@@ -1,3 +1,13 @@
+# Editor files.
+.vscode
+*.swo
+*.swp
+
+# Build caches and temporary files.
 composer.lock
 vendor/
 *.cache
+
+# Kilala CMS sensitive files.
+configuration.php
+configure.php
