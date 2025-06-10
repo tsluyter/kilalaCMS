@@ -1,0 +1,9 @@
+# Editor files.
+.vscode
+*.swo
+*.swp
+
+# Kilala CMS sensitive files.
+configuration.php
+configure.php
+
