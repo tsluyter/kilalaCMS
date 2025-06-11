@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>{{siteName}} - {{postTitle}}</title>
+    <meta name="description" content="{{postTitle}}"/>
+    <meta name="keywords" content="{{tags}}"/>
+
+    <meta name="robots" content="follow,noarchive"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="content-language" content="en"/>
+    </meta>
+
+    <link rel="stylesheet" href="/Templates/kilalacms.css"/>
+    <link rel="alternate" type="application/rss+xml" href="/rss.php" title="RSS feed"/>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+</head>
+
+<body bgcolor="#EBECE4">
+
+    <div id="popupbox">
+        <form name="login" action="/index.php" method="post">
+            <center>Username:</center>
+            <center>
+                <input name="username" size="14"/>
+            </center>
+            <center>Password:</center>
+            <center>
+                <input name="password" type="password" size="14"/>
+            </center>
+            <center>
+                <input type="submit" name="submit" value="login"/>
+            </center>
+        </form>
+        <br/>
+        <center>
+            <a href="#" id="closelogin">close</a>
+        </center>
+    </div>
+
+    <div id="NewHeader">
+        <h1 class="blog">
+            <a class="blog" href="/">{{siteName}} - {{siteTitle}}</a>
+        </h1>
+    </div>
+
+    <div id="NewLogo">
+        <a href="/">
+            <img src="/Images/Logos/KilalaSit.png" alt="Kilala sitting"/>
+        </a>
+    </div>
+
+    <div id="TopBackground">
+        <img src="/Images/Logos/BCK-topbar.jpg" alt="Unimportant background"/>
+    </div>
+
+    <div id="TopContact">
+        <a id="loginbutton" href="#" class="topbar">Login</a>
+    </div>
+
+    <div id="TopFeed">
+        <a class="topbar" href="/rss.php">&nbsp;&nbsp;RSS feed</a>
+    </div>
+
+    <div id="TopSearch">
+        <form action="/index.php" method="post">
+            <input style="menutext" type="text" size="20" name="search" onfocus="if(this.value=='Search...'){this.value='';}" onblur="if(this.value==''){this.value='Search...';}" value="Search..."/>
+        </form>
+    </div>
+    <div id="FPWrapper">
+        <div class="FPFloat">
+            <h1 class="menutext">About me</h1>
+            {{aboutMe}}
+        </div>
+
+        <div class="FPFloat">
+            <h1 class="menutext">Blog archives</h1>
+            <p>Here you should find a long list of years and months, iterated like:</p>
+            {{archiveMenu}}
+        </div>
+
+    </div>
+
+    <div id="MainWrapper">
+        <div id="OldTopSections">
+            <table align="left" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                    <tr>
+                        <td style="padding-right: 20px;">
+                            <h1 class="menutext">
+                                <a class="menutext" href="/">&gt; Weblog</a>
+                            </h1>
+                        </td>
+                        <td style="padding-right: 20px;">
+                            <h1 class="menutext">
+                                <a class="menutext" href="/Sysadmin">&gt; Sysadmin articles</a>
+                            </h1>
+                        </td>
+                        <td style="padding-right: 20px;">
+                            <h1 class="menutext">
+                                <a class="menutext" href="/School">&gt; Maths teaching</a>
+                            </h1>
+                        </td>
+                        <td>
+                            <h1 class="menutext"></h1>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="PostContent">
+            <h1 class="blog">
+                <a class="title" href="./index.php?id={{postId}}">{{postTitle}}</a>
+            </h1>
+
+            <p class="date">
+            {{postTimestamp}}
+            </p>
+
+            {{postContent}}
+
+            <br clear="left"/>
+            <p class="smallprint">
+                kilala.nl tags: 
+                <a class="smallprint" href="/index.php?tag=work" rel="tag">work</a>
+                , 
+                <a class="smallprint" href="/index.php?tag=studies" rel="tag">studies</a>
+                , 
+            </p>
+            <p class="blog" align="right">
+                <a href="./index.php?id={{postid}}">View or add comments</a>
+                 (curr. {{postCommentCount}})
+            </p>
+        </div>
+        <div id="Copyright">
+            <p>
+                <i>All content, with exception of "borrowed" blogpost images, or unless otherwise indicated, is copyright of Tess Sluijter-Stek. The character Kilala the cat-demon is copyright of Rumiko Takahashi and used here without permission.</i>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script language="JavaScript" type="text/javascript">
+    document.getElementById("loginbutton").addEventListener("click", function() {
+        var popupboxdiv = document.getElementById("popupbox");
+        popupboxdiv.style.visibility = "visible";
+    });
+    document.getElementById("closelogin").addEventListener("click", function() {
+        var popupboxdiv = document.getElementById("popupbox");
+        popupboxdiv.style.visibility = "hidden";
+    });
+</script>
+

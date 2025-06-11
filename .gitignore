@@ -2,6 +2,7 @@
 .vscode
 *.swo
 *.swp
+.DS_Store
 
 # Build caches and temporary files.
 composer.lock

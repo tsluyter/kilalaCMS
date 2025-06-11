@@ -1,7 +1,7 @@
 FROM php:8-alpine
 MAINTAINER T. Sluijter-Stek
 
-COPY . /var/www/
+COPY ./composer.json /var/www/
 WORKDIR /var/www
 
 RUN apk add composer \
@@ -11,9 +11,9 @@ RUN apk add composer \
             php-mbstring \
             php-tokenizer \
             php-dom \
-    && composer install --no-dev \
-    && rm -r /var/www/tests/
+    && composer install --no-dev
 
+COPY . /var/www/
 RUN chown -R www-data:www-data /var/www/ 
 
 EXPOSE 8080

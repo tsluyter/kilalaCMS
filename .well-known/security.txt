@@ -1,0 +1,8 @@
+Acknowledgments: https://www.kilala.nl/index.php?id=2636
+Policy: https://www.kilala.nl/index.php?id=2636
+Canonical: https://www.kilala.nl/.well-known/security.txt
+Encryption: https://www.kilala.nl/.well-known/GPGkey-security.txt
+Contact: mailto:tsluyter@kilala.nl
+Expires: 25 OCT 2026 19:06:00
+Preferred-Languages: en, nl
+

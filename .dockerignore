@@ -1,0 +1,9 @@
+.DS_Store
+.dockerignore
+.git
+.github
+.gitignore
+.phpunit.result.cache
+composer.lock
+docker-compose.yml
+tests
