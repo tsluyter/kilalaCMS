@@ -2,21 +2,9 @@ Options All -Indexes
 
 RewriteEngine On
 
-##### Block added by default by Slim-Skeleton
-# Redirect to the public folder
-# RewriteBase /
-#RewriteRule ^$ public/ [L]
-#RewriteRule (.*) public/$1 [L]
-
-# Redirect to HTTPS
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-###### End Slim-Skeleton block.
-
 # Enforce https, may cause issues on Dev and Test.
 #RewriteCond %{HTTPS} !=on
 #RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 
 # Basic error handling.
 ErrorDocument 400 /error.html
