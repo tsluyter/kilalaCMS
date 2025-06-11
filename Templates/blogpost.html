@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
@@ -65,17 +65,18 @@
 
     <div id="TopSearch">
         <form action="/index.php" method="post">
-            <input style="menutext" type="text" size="20" name="search" onfocus="if(this.value=='Search...'){this.value='';}" onblur="if(this.value==''){this.value='Search...';}" value="Search..."/>
+            <input id="searchtextbar" type="text" size="20" name="search" value="Search..."/>
         </form>
     </div>
-    <div id="FPWrapper">
+
+    <div class="leftmenu" id="FPWrapper">
         <div class="FPFloat">
-            <h1 class="menutext">About me</h1>
+            <h1>About me</h1>
             {{aboutMe}}
         </div>
 
         <div class="FPFloat">
-            <h1 class="menutext">Blog archives</h1>
+            <h1>Blog archives</h1>
             <p>Here you should find a long list of years and months, iterated like:</p>
             {{archiveMenu}}
         </div>
@@ -83,27 +84,27 @@
     </div>
 
     <div id="MainWrapper">
-        <div id="OldTopSections">
+        <div id="Navbar">
             <table align="left" border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                     <tr>
-                        <td style="padding-right: 20px;">
-                            <h1 class="menutext">
-                                <a class="menutext" href="/">&gt; Weblog</a>
-                            </h1>
-                        </td>
-                        <td style="padding-right: 20px;">
-                            <h1 class="menutext">
-                                <a class="menutext" href="/Sysadmin">&gt; Sysadmin articles</a>
-                            </h1>
-                        </td>
-                        <td style="padding-right: 20px;">
-                            <h1 class="menutext">
-                                <a class="menutext" href="/School">&gt; Maths teaching</a>
+                        <td>
+                            <h1>
+                                <a href="/">&gt; Weblog</a>
                             </h1>
                         </td>
                         <td>
-                            <h1 class="menutext"></h1>
+                            <h1>
+                                <a href="/Sysadmin">&gt; Sysadmin articles</a>
+                            </h1>
+                        </td>
+                        <td>
+                            <h1 >
+                                <a href="/School">&gt; Maths teaching</a>
+                            </h1>
+                        </td>
+                        <td>
+                            <h1></h1>
                         </td>
                     </tr>
                 </tbody>
@@ -144,14 +145,5 @@
 
 </html>
 
-<script language="JavaScript" type="text/javascript">
-    document.getElementById("loginbutton").addEventListener("click", function() {
-        var popupboxdiv = document.getElementById("popupbox");
-        popupboxdiv.style.visibility = "visible";
-    });
-    document.getElementById("closelogin").addEventListener("click", function() {
-        var popupboxdiv = document.getElementById("popupbox");
-        popupboxdiv.style.visibility = "hidden";
-    });
-</script>
+<script type="text/javascript" src="/Templates/kilalacms.js"></script>
 

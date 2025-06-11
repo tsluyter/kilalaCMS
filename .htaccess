@@ -1,25 +1,22 @@
 Options All -Indexes
 
-<IfModule mod_rewrite.c>
+RewriteEngine On
 
-  RewriteEngine On
+##### Block added by default by Slim-Skeleton
+# Redirect to the public folder
+# RewriteBase /
+#RewriteRule ^$ public/ [L]
+#RewriteRule (.*) public/$1 [L]
 
-  ##### Block added by default by Slim-Skeleton
-  # Redirect to the public folder
-  # RewriteBase /
-  RewriteRule ^$ public/ [L]
-  RewriteRule (.*) public/$1 [L]
+# Redirect to HTTPS
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+###### End Slim-Skeleton block.
 
-  # Redirect to HTTPS
-  # RewriteCond %{HTTPS} off
-  # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  ###### End Slim-Skeleton block.
+# Enforce https, may cause issues on Dev and Test.
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # Enforce https, may cause issues on Dev and Test.
-  RewriteCond %{HTTPS} !=on
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-</IfModule>
 
 # Basic error handling.
 ErrorDocument 400 /error.html
@@ -41,7 +38,5 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 Header set Referrer-Policy strict-origin-when-cross-origin
 Header set Access-Control-Allow-Methods "GET,PUT"
 Header set Access-Control-Allow-Headers "Content-Type, Authorization"
-
-# The hash in the script-src is for the Javascript search bar.
-Header set Content-Security-Policy "default-src 'none'; frame-ancestors 'self'; frame-src 'self' https://www.youtube.com; worker-src 'self' https://www.youtube.com; form-action 'self'; base-uri 'self'; child-src 'self' https://www.youtube.com; img-src 'self'; script-src https://www.kilala.nl 'strict-dynamic' 'sha256-oz3bOQwqb+/4gh1SDofk8VcqwdioGTYDRS9bvCEschc=' 'sha256-emdy2hdRDWYkroAWiv+OAcwWcF6Fhv0HVX6+4kwkQnw=' 'sha256-2/5FQmUn2JBeDiNlOKW1n+fHneOdoBVZFRj9tIPQkvE=' 'sha256-Zto99WAJwWj+dQH8YJdhumhDuUP6BtgUbzEYIXjKpHw='; object-src 'none'; style-src 'self'"
+Header set Content-Security-Policy "default-src 'none'; frame-ancestors 'self'; frame-src 'self' https://www.youtube.com; worker-src 'self' https://www.youtube.com; form-action 'self'; base-uri 'self'; child-src 'self' https://www.youtube.com; img-src 'self'; script-src https://www.kilala.nl 'self' 'strict-dynamic'; object-src 'none'; style-src 'self'"
 

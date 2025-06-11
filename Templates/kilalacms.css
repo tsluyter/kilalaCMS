@@ -19,23 +19,29 @@ a.blog   {
 h1.blog   {
 	}
 
-a.menutext   {
-	font-family: verdana, helvetica, sans-serif;
-	font-size: 12pt;
-	font-weight: 600;
-	color: #000000;
-	vertical-align: top;
-	margin-left: 10px;
-	}
+div.leftmenu   {
+    font-family: verdana, helvetica, sans-serif;
+    font-size: 12pt;
+    color: #000000;
+    vertical-align: top;
+    margin-left: 10px;
+    }
 
-h1.menutext   {
-	font-family: verdana, helvetica, sans-serif;
-	font-size: 12pt;
-	font-weight: 600;
-	color: #000000;
-	vertical-align: top;
-	margin-left: 10px;
-	}
+#FPWrapper {
+    position: absolute;
+    left: 10px; 
+    top: 200px; 
+    width: 200px;
+    z-index: 2;
+    }
+
+.FPFloat {
+    width: 200px;
+    padding: 10px 10px 10px 10px; 
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    }
 
 h2   {
 	font-family: verdana, helvetica, sans-serif;
@@ -71,10 +77,6 @@ p.comment   {
 
 p.head {
 	color: #000000;
-	}
-
-p.menutext   {
-	margin-left: 10px;
 	}
 
 p.whisper   {
@@ -238,30 +240,6 @@ img {
 	z-index: 1;
     }
 
-#FPWrapper {
-    position: absolute;
-    left: 10px; 
-    top: 200px; 
-	width: 200px;
-	z-index: 2;
-	}
-
-#FPWrapper-old {
-    position: absolute;
-    left: 10px; 
-    top: 370px; 
-	width: 200px;
-	z-index: 2;
-	}
-
-.FPFloat {
-	width: 200px;
-    padding: 10px 10px 10px 10px; 
-	background-color: #ffffff;
-	border: 1px solid #000000;
-	margin-bottom: 20px;
-	}
-
 #NewHeader {
     position: absolute;
 	left: 10px; 
@@ -308,28 +286,17 @@ img {
 
 #Copyright   {
     padding: 0px 0px 0px 0px; 
-	margin-bottom:0px;
+    margin-bottom:0px;
     }
 
-#OldTopSections {
-	text-align: center;
-    height: 30px;
-	margin-bottom: 20px;
-    }
-
-#OldSubSections {
-	text-align: center;
-    height: 30px;
-	margin-bottom: 20px;
-    }	
-	
-#NewTopSection   {
+#Navbar {
     text-align: center;
-    height: 100px;
-	margin-bottom: 20px;
-	border: 0px solid red;
+    font-size: 16pt;
+    height: 30px;
+    margin-bottom: 20px;
+    padding-right: 20px;
     }
-	
+
 .tile {
   position: absolute;
   border: 0px solid black;

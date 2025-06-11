@@ -1,7 +1,6 @@
-FROM php:8-alpine
-MAINTAINER T. Sluijter-Stek
+FROM php:8-alpine AS kilalacms-build
 
-COPY ./composer.json /var/www/
+COPY ./composer.json /var/www
 WORKDIR /var/www
 
 RUN apk add composer \
@@ -14,10 +13,14 @@ RUN apk add composer \
     && composer install --no-dev
 
 COPY . /var/www/
-RUN chown -R www-data:www-data /var/www/ 
 
-EXPOSE 8080
+
+FROM php:8.3-apache as kilalacms
+LABEL org.opencontainers.image.authors="info@kilala.nl"
+
+COPY --from=kilalacms-build /var/www /var/www/html
+RUN a2enmod headers && a2enmod rewrite && chown -R www-data:www-data /var/www/html
+
+EXPOSE 80
 USER www-data
-
-CMD ["/usr/bin/php", "-S", "0.0.0.0:8080", "-t", "public"]
 
