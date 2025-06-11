@@ -38,5 +38,6 @@ Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains
 Header set Referrer-Policy strict-origin-when-cross-origin
 Header set Access-Control-Allow-Methods "GET,PUT"
 Header set Access-Control-Allow-Headers "Content-Type, Authorization"
-Header set Content-Security-Policy "default-src 'none'; frame-ancestors 'self'; frame-src 'self' https://www.youtube.com; worker-src 'self' https://www.youtube.com; form-action 'self'; base-uri 'self'; child-src 'self' https://www.youtube.com; img-src 'self'; script-src https://www.kilala.nl 'self' 'strict-dynamic'; object-src 'none'; style-src 'self'"
+
+Header set Content-Security-Policy "default-src 'none'; frame-ancestors 'self'; frame-src 'self' https://www.youtube.com; worker-src 'self' https://www.youtube.com; form-action 'self'; base-uri 'self'; child-src 'self' https://www.youtube.com; img-src 'self'; script-src https://www.kilala.nl 'self'; object-src 'none'; style-src 'self'"
 
