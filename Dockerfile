@@ -22,6 +22,7 @@ RUN a2enmod headers && a2enmod rewrite
 COPY --from=kilalacms-build /var/www /var/www/html
 RUN chown -R www-data:www-data /var/www/html
 
+ENV docker=true
 EXPOSE 80
 USER www-data
 
