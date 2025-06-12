@@ -67,6 +67,7 @@
     <div id="TopSearch">
         <form action="/index.php" method="post">
             <input id="searchtextbar" type="text" size="20" name="search" value="Search..."/>
+            <input id="csrf" type="hidden" value="{{csrf_token}}"/>
         </form>
     </div>
 
